@@ -9,11 +9,12 @@ const profileRoutes = require('./routes/profile');
 dotenv.config();
 
 const PORT = process.env.PORT || 3000;
+const CLIENT_URL = process.env.CLIENT_URL;
 
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: CLIENT_URL,
   credentials: true,
 }));
 
